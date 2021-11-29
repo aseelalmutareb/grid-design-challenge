@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --primary-blue: hsl(212, 86%, 64%); 
+
+    --dark-gray: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.5rem;
+    margin: 8rem 15rem;
+    background-color: var(--light-gray);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3{
+    color: var(--dark-gray);
+}
+
+
+h1{
+    font-weight: 200;
+}
+
+h2,
+h3{
+    font-weight: 600;
+}
+
+h1,
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+p{
+    color: var(--grayish-blue);
+    padding-top: 1rem;
+}
+
+.grid-row-span2{
+    grid-row: span 2;
+}
+
+
+.top-container{
+    display: grid;
+    place-items: center;
+}
+
+
+.middle-container{
+    margin-top: 7rem;
+    display: grid;
+    gap: 8rem 3rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+}
+
+.top-container p{
+    width: 50%;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.middle-container p{
+    font-size: 1.32rem;
+    padding-bottom: 4rem;
+}
+
+.box-container{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    border-top: 4px solid;
+    box-shadow: 4px 10px 20px hsl(229, 32%, 85%);
+}
+
+
+.box-container img{
+    margin-left: auto;
+}
+
+.supervisor{
+    border-top-color: var(--primary-cyan);
+}
+
+.team-builder{
+    border-top-color: var(--primary-red);
+}
+
+.calculator{
+    border-top-color: var(--primary-blue);
+}
+
+.karma{
+    border-top-color: var(--primary-orange);
+}
+
+footer{
+    margin-top: 5rem;
+}
+
+.attribution { font-size: 1.1rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+@media only screen and (max-width: 375px){
+    body{
+        margin: 8rem 3.5rem;
+    }
+
+    h1,
+    h2{
+    font-size: 2.5rem;
+    }
+
+    .top-container p{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .middle-container{
+        gap: 3rem;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+
+    .karma{
+        grid-area: 4 / 1 / 6 / 1;
+    }
+
+    .attribution{
+        font-size: 1rem;
+    }
+
+}
